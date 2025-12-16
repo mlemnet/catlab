@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: nginx-temp
+  name: nginx-temp
+  namespace: mealie
+spec:
+  containers:
+    - image: nginx:latest
+      name: nginx-temp
+      volumeMounts:
+      - mountPath: /app/data
+        name: temp-dir
+    - image: busybox
+      command: ["sleep"]
+      args: ["100"]
+      name: busybox-temp
+      volumeMounts:
+      - mountPath: /app/data
+        name: temp-dir
+  volumes:
+  - name: temp-dir
+    persistentVolumeClaim:
+      claimName: mealie-storage
