@@ -4,6 +4,7 @@ metadata:
   name: linkding-data-pvc
   namespace: linkding
 spec:
+  volumeName: linkding-data-pv
   resources:
     requests:
       storage: 1Gi
