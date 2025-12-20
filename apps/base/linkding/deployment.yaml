@@ -16,7 +16,7 @@ spec:
         app: linkding
     spec:
       containers:
-      - image: sissbruecker/linkding:1.44.2
-        name: linkding
-        resources: {}
-status: {}
+        - name: linkding
+          image: sissbruecker/linkding:1.44.2
+          ports:
+            - containerPort: 9000
