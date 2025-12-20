@@ -5,6 +5,8 @@ metadata:
   namespace: linkding
 spec:
   volumeName: linkding-data-pv
+  accessModes:
+    - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
