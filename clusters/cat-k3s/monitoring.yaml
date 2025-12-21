@@ -10,7 +10,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./monitoring/cat-k3s
+  path: ./monitoring/controllers/cat-k3s
   prune: true
 #  decryption:
 #    provider: sops
