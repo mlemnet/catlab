@@ -21,6 +21,9 @@ spec:
       containers:
         - name: linkding
           image: sissbruecker/linkding:1.44.2
+          envFrom:
+            - secretRef:
+                name: user-secret
           ports:
             - containerPort: 9090
           volumeMounts:
