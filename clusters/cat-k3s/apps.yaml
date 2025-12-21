@@ -12,3 +12,7 @@ spec:
     name: flux-system
   path: ./apps/cat-k3s
   prune: true
+  decryption:
+    provider: sops
+      secretRef:
+        name: sops-age
