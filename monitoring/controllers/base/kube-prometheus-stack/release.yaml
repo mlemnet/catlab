@@ -27,3 +27,10 @@ spec:
   values:
     grafana:
       adminPassword: test
+    ingress:
+      enabled: true
+      igressClassName: traefik
+      hosts:
+        - grafana.meowops.org
+      paths:
+        - /
