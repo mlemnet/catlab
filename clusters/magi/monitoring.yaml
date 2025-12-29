@@ -10,7 +10,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./monitoring/controllers/magi-k3s
+  path: ./monitoring/controllers/magi
   prune: true
 #  decryption:
 #    provider: sops
