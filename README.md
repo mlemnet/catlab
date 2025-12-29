@@ -11,12 +11,12 @@ And also my CV 😎 (I’m open to work!)
 I currently maintain **two K3s clusters**:
 
 ### `cat-k3s` (Staging)
-
+* **architecture:** 1x control node, 2x worker node (migrating to 3x control + 1x worker soon)
 * **Nodes:** 3× Raspberry Pi 5
 * **Purpose:** Testing and staging deployments
 
-### `magi-k3s` (Production)
-
+### `magi` (Production)
+* **architecture:** 3x control nodes
 * **Nodes:** 3× HP EliteDesk 800 Mini PCs
 * **Purpose:** Production-ready cluster for stable services
 
@@ -48,3 +48,4 @@ Inside you’ll find:
 * GitOps configuration
 * Secrets management examples
 * Notes and experiments from my homelab Kubernetes setups
+
