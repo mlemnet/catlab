@@ -7,7 +7,6 @@ spec:
   storageClassName: nfs-client
   accessModes:
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
   resources:
     requests:
       storage: 1Gi
