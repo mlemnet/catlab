@@ -9,4 +9,4 @@ resources:
 
 patchesStrategicMerge:
   - deployment.yaml
-
+  - storageclass.yaml
