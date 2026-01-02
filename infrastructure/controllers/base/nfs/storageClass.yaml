@@ -1,7 +1,7 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: nfs-client
-provisioner: nfs-client-provisioner
+  name: nfs-client-provisioner
+provisioner: nfs-subdir-external-provisioner
 reclaimPolicy: Retain
 
