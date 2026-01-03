@@ -14,3 +14,22 @@ spec:
         name: csi-driver-nfs
         namespace: nfs-controller
       interval: 12h
+  storageClasses:
+    - name: nfs-delete
+      annotations:
+        storageclass.kubernetes.io/is-default-class: "true"
+      parameters:
+        server: 192.168.30.10
+        share: /mnt/k3s_ext/k3s-nfs
+      reclaimPolicy: Delete
+      volumeBindingMode: Immediate
+      mountOptions:
+        - nfsvers=4.1
+    - name: nfs-retain
+      parameters:
+        server: 192.168.30.10
+        share: /mnt/k3s_ext/k3s-nfs-retain
+      reclaimPolicy: Retain
+      volumeBindingMode: Immediate
+      mountOptions:
+        - nfsvers=4.1
