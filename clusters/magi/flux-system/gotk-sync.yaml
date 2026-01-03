@@ -20,7 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./clusters/magi/flux-system
+  path: ./clusters/magi
   prune: true
   sourceRef:
     kind: GitRepository
