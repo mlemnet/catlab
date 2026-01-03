@@ -4,7 +4,7 @@ metadata:
   name: linkding-data-pvc
   namespace: linkding
 spec:
-  storageClassName: nfs-retain
+  storageClassName: nfs-retain-linkding
   accessModes:
     - ReadWriteOnce
   resources:
