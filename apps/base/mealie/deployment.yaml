@@ -4,7 +4,6 @@ metadata:
   labels:
     app: mealie
   name: mealie
-  namespace: mealie
 spec:
   replicas: 1
   selector:
@@ -19,7 +18,7 @@ spec:
         - image: ghcr.io/mealie-recipes/mealie:v3.9.2
           name: mealie
           ports:
-            - containerPort: 9080
+            - containerPort: 9000
           volumeMounts:
             - name: mealie-data
               mountPath: /etc/mealie/data
