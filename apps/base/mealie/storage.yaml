@@ -4,7 +4,7 @@ metadata:
   name: mealie-data-pvc
   namespace: mealie
 spec:
-  storageClassName: nfs-retain
+  storageClassName: nfs-retain-mealie
   accessModes:
     - ReadWriteOnce
   resources:

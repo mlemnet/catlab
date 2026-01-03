@@ -43,3 +43,12 @@ spec:
         volumeBindingMode: Immediate
         mountOptions:
           - nfsvers=4.1
+      - name: nfs-retain-mealie
+        parameters:
+          server: 192.168.30.10
+          share: /mnt/k3s_ext/k3s-nfs-retain
+          subDir: mealie-data
+        reclaimPolicy: Retain
+        volumeBindingMode: Immediate
+        mountOptions:
+          - nfsvers=4.1
