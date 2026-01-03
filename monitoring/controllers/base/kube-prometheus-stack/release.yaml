@@ -29,8 +29,21 @@ spec:
       adminPassword: test
       ingress:
         enabled: true
-        igressClassName: traefik
+        ingressClassName: traefik
         hosts:
           - grafana.meowops.org
         paths:
           - /
+      datasources:
+        datasources.yaml:
+          apiVersion: 1
+          datasources:
+            - name: Prometheus
+              type: prometheus
+              uid: prometheus
+              url: http://kube-prometheus-stack-prometheus:9090
+              access: proxy
+              isDefault: true
+              jsonData:
+                httpMethod: POST
+                timeInterval: 30s
