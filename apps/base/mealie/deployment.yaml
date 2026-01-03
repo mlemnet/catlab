@@ -21,7 +21,7 @@ spec:
           ports:
             - containerPort: 9080
           volumeMounts:
-            - name: mealie-storage
+            - name: mealie-data
               mountPath: /etc/mealie/data
       volumes:
         - name: mealie-data
