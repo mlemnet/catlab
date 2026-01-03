@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cloudflared
+  name: cloudflared-mealie
 spec:
   selector:
     matchLabels:
-      app: cloudflared
+      app: cloudflared-mealie
   replicas: 1 # You could also consider elastic scaling for this deployment
   template:
     metadata:
       labels:
-        app: cloudflared
+        app: cloudflared-mealie
     spec:
       containers:
-        - name: cloudflared
+        - name: cloudflared-mealie
           image: cloudflare/cloudflared:latest
           args:
             - tunnel
@@ -46,12 +46,12 @@ spec:
       volumes:
         - name: creds
           secret:
-            secretName: tunnel-credentials-linkding
+            secretName: tunnel-credentials-mealie
 
         # Create a config.yaml file from the ConfigMap below.
         - name: config
           configMap:
-            name: cloudflared
+            name: cloudflared-mealie
             items:
               - key: config.yaml
                 path: config.yaml
@@ -63,22 +63,22 @@ spec:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: cloudflared
+  name: cloudflared-mealie
 data:
   config.yaml: |
     # Name of the tunnel you want to run
 
-    tunnel: linkding
+    tunnel: mealie
 
-    credentials-file: /etc/cloudflared/creds/credentials.json
+    credentials-file: /etc/cloudflared/creds/credentials-mealie.json
 
     # Serves the metrics server under /metrics and the readiness server under /ready
     metrics: 0.0.0.0:2000
     no-autoupdate: true
 
     ingress:
-    - hostname: linkding.meowops.org
-      service: http://linkding:9090
+    - hostname: mealie.meowops.org
+      service: http://linkding:9080
 
     # This rule sends traffic to the built-in hello-world HTTP server. This can help debug connectivity
     # issues. If hello.example.com resolves and tunnel.example.com does not, then the problem is

@@ -4,8 +4,9 @@ metadata:
   name: mealie-storage
   namespace: mealie
 spec:
+  storageClassName: nfs-retain
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 50Mi
+      storage: 2Gi
