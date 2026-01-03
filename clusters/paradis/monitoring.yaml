@@ -10,7 +10,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./monitoring/controllers/cat-k3s
+  path: ./monitoring/controllers/paradis
   prune: true
 #  decryption:
 #    provider: sops
@@ -30,7 +30,7 @@ spec:
 #  sourceRef:
 #    kind: GitRepository
 #    name: flux-system
-#  path: ./monitoring/configs/cat-k3s
+#  path: ./monitoring/configs/paradis
 #  prune: true
 #  decryption:
 #    provider: sops
