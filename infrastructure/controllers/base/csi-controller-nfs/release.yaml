@@ -61,3 +61,22 @@ spec:
         volumeBindingMode: Immediate
         mountOptions:
           - nfsvers=4.1
+      - name: nfs-retain-jellyfin
+        parameters:
+          server: 192.168.30.10
+          share: /mnt/k3s_ext/k3s-nfs-retain
+          subDir: jellyfin-config
+        reclaimPolicy: Retain
+        volumeBindingMode: Immediate
+        mountOptions:
+          - nfsvers=4.1
+      - name: nfs-retain-jellyfin
+        parameters:
+          server: 192.168.30.10
+          share: /mnt/k3s_ext/k3s-nfs-retain
+          subDir: jellyfin-cache
+        reclaimPolicy: Retain
+        volumeBindingMode: Immediate
+        mountOptions:
+          - nfsvers=4.1
+
