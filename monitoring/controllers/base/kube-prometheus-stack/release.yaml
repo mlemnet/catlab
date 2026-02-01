@@ -41,12 +41,15 @@ spec:
         datasources.yaml:
           apiVersion: 1
           datasources:
-            - name: Prometheus
+            - name: Prometheus-paradis
               type: prometheus
               uid: prometheus
-              url: http://kube-prometheus-stack-prometheus:9090
+              url: http://192.168.30.50:9090
               access: proxy
               isDefault: true
-              jsonData:
-                httpMethod: POST
-                timeInterval: 30s
+            - name: Promethes-magi
+              type: prometheus
+              uid: prometheus
+              url: http://192.168.30.20:9090
+              access: proxy
+              isDefault: false
