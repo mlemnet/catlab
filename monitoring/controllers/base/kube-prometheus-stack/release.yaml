@@ -26,6 +26,9 @@ spec:
           kind: PrometheusRule
   values:
     grafana:
+      sidecar:
+        datasources:
+          defaultDatasourceEnabled: false
       admin:
         existingSecret: "grafana-admin-user"
         userKey: user
