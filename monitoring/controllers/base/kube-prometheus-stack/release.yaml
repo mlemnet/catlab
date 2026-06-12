@@ -44,10 +44,10 @@ spec:
             - name: Prometheus-paradis
               type: prometheus
               uid: prometheus-paradis
-              url: http://192.168.30.50:9090
+              url: http://192.168.30.25:9090
               access: proxy
               isDefault: true
-            - name: Promethes-magi
+            - name: Prometheus-magi
               type: prometheus
               uid: prometheus-magi
               url: http://192.168.30.20:9090
