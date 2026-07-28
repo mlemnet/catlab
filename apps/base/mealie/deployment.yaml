@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: mealie
-          image: ghcr.io/mealie-recipes/mealie:v3.19.2
+          image: ghcr.io/mealie-recipes/mealie:v3.22.0
           env:
             - name: BASE_URL
               value: http://mealie.meowops.org
